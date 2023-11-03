@@ -1,0 +1,77 @@
+<header>
+  <nav
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+  >
+    <div class="container">
+      <a class="navbar-brand" [routerLink]="['/inicio']">PruebaTecnica</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target=".navbar-collapse"
+        aria-label="Toggle navigation"
+        [attr.aria-expanded]="isExpanded"
+        (click)="toggle()"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="navbar-collapse collapse d-sm-inline-flex justify-content-end"
+        [ngClass]="{ show: isExpanded }"
+      >
+        <ul class="navbar-nav flex-grow">
+          <li
+            class="nav-item"
+            [routerLinkActive]="['link-active']"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <a class="nav-link text-dark" [routerLink]="['/inicio']">Tiendas Crud</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/CrudClientes']"
+              >Clientes Crud</a
+            >
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/crudArticulos']"
+              >Articulos Crud</a
+            >
+          </li>
+          <li class="nav-item" (click)="loadCart(content)">
+            <a class="nav-link text-dark" 
+              >ver Carrito</a
+            >
+          </li>
+          <li class="nav-item" (click)="logout()">
+            <a class="nav-link text-dark" 
+              >Salir</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Carrito de compras</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div *ngFor="let item of ArticulosList | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+      <div style="display: flex;justify-content: center; align-items: center;">
+        <div class="text-center">{{ item.codigo }}</div>
+        <div class="text-center">{{ item.descripcion }}</div>
+      </div>
+    </div>
+      
+  </div>
+  <div class="modal-footer">
+   
+
+    <button type="button" class="btn btn-primary" (click)="modal.close('Cerrar')">Cerrar</button>
+  </div>
+</ng-template>

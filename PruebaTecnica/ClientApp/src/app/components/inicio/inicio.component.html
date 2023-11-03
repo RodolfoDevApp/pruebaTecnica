@@ -1,0 +1,72 @@
+<!-- cliente.component.html -->
+<div class="container">
+  <button type="button" class="btn btn-primary mt-3" (click)="openModal(content)">Crear nuevo</button>
+</div>
+
+<!-- app.component.html -->
+<div class="container">
+  <!-- Filtro por nombre -->
+  <input type="text" [(ngModel)]="filterText" (keyup)="filterData()" class="form-control mt-3" placeholder="Filtrar por nombre" />
+  
+  <!-- Center-align the table -->
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="text-center">Sucursal</th>
+          <th class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of filteredData | paginate: { itemsPerPage: 10, currentPage: p }; let i = index">
+          <td class="text-center">{{ item.sucursal }}</td>
+          <td class="text-center">
+            <div class="d-flex justify-content-center align-items-center">
+              <button class="btn btn-primary editar mx-2" (click)="openModal(content,item)">Editar</button>
+              <button class="btn btn-danger borrar mx-2" (click)="deleteItem(item.tiendaId)">Borrar</button>
+              <button class="btn btn-success carrito mx-2" (click)="addToCart(item)">Mostrar Articulos</button>
+            </div>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Paginación -->
+  <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel=""></pagination-controls>
+</div>
+
+
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">Cliente</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <h2>{{id===0?'Registro':'Editar'}}</h2>
+        <form [formGroup]="registerForm">
+          <div>
+            <label for="sucursal">Sucursal: </label>
+            <input type="text" id="sucursal" formControlName="sucursal">
+          </div>
+          <div>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" formControlName="direccion">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button *ngIf="id===0" type="button" class="btn btn-primary" (click)="onSubmit()">Guardar</button>
+      <button *ngIf="id!==0" type="button" class="btn btn-primary" (click)="editItem()">Guardar</button>
+
+      <button type="button" class="btn btn-primary" (click)="modal.close('Candelar')">Cancelar</button>
+    </div>
+  </ng-template>
+
+  
+  

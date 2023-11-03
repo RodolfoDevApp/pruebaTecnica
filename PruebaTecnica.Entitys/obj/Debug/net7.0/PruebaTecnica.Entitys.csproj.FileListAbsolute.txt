@@ -1,0 +1,12 @@
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\bin\Debug\net7.0\PruebaTecnica.Entitys.deps.json
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\bin\Debug\net7.0\PruebaTecnica.Entitys.dll
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\bin\Debug\net7.0\PruebaTecnica.Entitys.pdb
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.csproj.AssemblyReference.cache
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.AssemblyInfoInputs.cache
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.AssemblyInfo.cs
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.csproj.CoreCompileInputs.cache
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.dll
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\refint\PruebaTecnica.Entitys.dll
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\PruebaTecnica.Entitys.pdb
+C:\Users\52777\source\repos\pruebaTecnica\PruebaTecnica\PruebaTecnica.Entitys\obj\Debug\net7.0\ref\PruebaTecnica.Entitys.dll

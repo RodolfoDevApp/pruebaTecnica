@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "PruebaTecnica.Entitys/1.0.0": {
+        "runtime": {
+          "PruebaTecnica.Entitys.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PruebaTecnica.Entitys/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
